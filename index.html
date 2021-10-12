@@ -12,18 +12,22 @@
 
   <body>
     <div class="section_1" >
-            <nav id="main_nav">
+            <div id="main_nav">
                 <img class="logo" src="./images/logo.svg" alt="sunnyside logo">
-                <div id="nav_box">
-                  <a class="nav_links"> About </a>
-                  <a class="nav_links"> Services </a>
-                  <a class="nav_links"> Projects </a>
-                  <a class="nav_links activeLink"> Contact </a>
+                <div class="nav_box">
+                    <nav class="menu">
+                      <ul>
+                        <li><a class="nav_links"> About </a></li>
+                        <li><a class="nav_links"> Services </a></li>
+                        <li><a class="nav_links"> Projects </a></li>
+                        <li><a class="nav_links activeLink"> Contact </a></li>
+                      </ul>
+                    </nav>
                 </div>
                 <div id="navhamburger">
                     <img src="./images/icon-hamburger.svg" />
                 </div>
-            </nav>
+              </div>
         <div id="section_1">
         <h1> We are creatives </h1>
         <img class="arrow-down" src="./images/icon-arrow-down.svg" alt="arrow pointing down">        </div>
@@ -58,27 +62,21 @@
           </div>
         </div>
       </div>
-    <div id="section_4" class="sectionSplited">
-      <div>
-        <img src="./images/desktop/image-graphic-design.jpg" class="sectionImg_4"/>
-        <div class="sectionTxt_41">
-          <h3>Graphic design</h3>
-          <p>
-            Great design makes you memorable. We deliver artwork that underscores your brand message and captures potential clients’ attention.
-          </p>
-        </div>
+      <div id="section_4" class="sectionSplited">
+          <div class="sectionTxt_41">
+            <h3>Graphic design</h3>
+            <p>
+              Great design makes you memorable. We deliver artwork that underscores your brand message and captures potential clients’ attention.
+            </p>
+          </div>      
+          <div class="sectionTxt_42">
+            <h3>Photography</h3>
+            <p>
+              Increase your credibility by getting the most stunning, high-quality photos that improve your business image.
+            </p>
+          </div>
+      </div>  
       </div>
-      <div>
-        <img src="./images/desktop/image-photography.jpg" class="sectionImg_4"/>
-        <div class="sectionTxt_42">
-          <h3>Photography</h3>
-          <p>
-            Increase your credibility by getting the most stunning, high-quality photos that improve your business image.
-          </p>
-        </div>
-      </div>
-    </div>  
-    </div>
     <div id="testmonials">
       <h3> Client testimonials</h3>
       <div>
@@ -117,7 +115,7 @@
       <img src="./images/desktop/image-gallery-cone.jpg"/>
       <img src="./images/desktop/image-gallery-sugarcubes.jpg"/>
     </div>
-    <footer>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>    <footer>
       <img src="./images/logo.svg" class="change"/>
       <div class="footerLinks">
         <a>About</a>
@@ -131,6 +129,7 @@
         <a><img src="./images/icon-pinterest.svg" alt=""></a>
       </div>
     </footer>
-   </body>
+    <script src="js/style.js"></script>
+    </body>
 </head>
 </html>

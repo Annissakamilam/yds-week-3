@@ -19,6 +19,47 @@ body{
     font-family: 'Fraunces', serif;
     font-size: 18px;
 }
+
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: red;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 4px;
+  }
+  
+  #myBtn:hover {
+    background-color: #555;
+  }
+
+  .nav_box {
+    display: block;
+    position: relative;
+    top: 0;
+    visibility: visible;
+    opacity: 1;
+    background: none;
+    margin-right: 7px;
+    width: auto;
+    padding: 0;
+}
+
+  .nav_box ul li {
+    margin-bottom: 35px;
+    list-style-type: none;
+    text-align: center;
+    float: left;
+}
+
+
 .arrow-down{
     margin-top: 30px;
 }
@@ -46,6 +87,11 @@ body{
     top: 5vh;
     position: absolute;
     justify-content: space-between;
+}
+.nav_box ul li a {
+    text-decoration: none;
+    display: inline-block;
+    
 }
 
 #navhamburger{
@@ -97,10 +143,13 @@ body{
 #section_1 h1{
     font-size: 54px;
     font-weight: 900;
-    margin-bottom: 90px;
+    margin-bottom: 0px;
 }
 
 @media screen and (max-width: 375px) {
+    .arrow-down{
+        margin: 0%;
+    }
     #section_1{
         background-position: center;
         padding: 10%;
@@ -125,30 +174,9 @@ body{
         font-size: 34px;
         letter-spacing: 5px;
     }
-    .sectionSplited div{
-        width: 100%;
-    }
-    .sectionSplited{
-        flex-direction: column;
-    }
-    
     .sectionTxt{
         text-align: center;
         padding: 1em;
-    }
-    #gallery img{
-        width: 50%;
-    }
-    
-    #testmonials div{
-        flex-direction: column;  
-
-    }
-    #testmonials{
-        padding-inline: 1em;
-    }
-    .singleTestmonial{
-        margin-inline: auto;
     }
 }
 
@@ -167,7 +195,7 @@ body{
 }
 .sectionTxt h3{
     font-weight: 900;
-    font-size: 45px;
+    font-size: 40px;
     margin-bottom: 40px;
     color: #23303e;
 }
@@ -224,34 +252,35 @@ body{
 }
 .sectionTxt_41{
     color: var(--dark-desaturated-cyan);
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    position: absolute !important;
-    top: 70%;
-    left: 25% !important;
-    width: 50% !important;
+    background: url(../images/desktop/image-graphic-design.jpg);
+    width: 100% !important;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 .sectionTxt_41 p{
     font-size: 16px;
     font-family: "Barlow", sans-serif;
     text-align: center;
+    margin-top: 10px ;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-bottom: 50px;
 
 }
 
 .sectionTxt_41 h3{
     font-weight: 900;
+    margin-top: 320px;
 }
 .sectionTxt_42{
     color: var(--dark-blue);
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;    
-    position: absolute !important;
-    top: 70%;
-    left: 25% !important;
-    width: 50% !important;
+    background: url(../images/desktop/image-photography.jpg);
+    width: 100% !important;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 
@@ -259,12 +288,17 @@ body{
     font-size: 16px;
     font-family: "Barlow", sans-serif;
     text-align: center;
+    margin-top: 10px ;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-bottom: 50px;
 
 }
 .sectionTxt_42 h3{
     font-weight: 900;
-    
+    margin-top: 320px;
 }
+
 
 #testmonials{
     text-align: center;
@@ -387,6 +421,127 @@ footer > * {
     color: var(--clr-neutral-white);
 }
 
-/* @media screen and (max-width: 600px) {
+@media screen and (max-width: 375px) {
+    .nav_box{
+        width:90%;
+        left:5%;
+        position:absolute;
+        top:75px;
+        padding:40px 10px;
+        background-color:#fff;
+        visibility:hidden;
+        opacity:0;
+        z-index: 99;
+    }
     
-} */
+     #navhamburger{
+         margin-left: 10%;
+     }
+    
+    .nav_box ul li{
+        margin-bottom:0px;
+        list-style-type:none;
+        text-align:center;
+        float: none;
+        clear: left;
+    }
+    
+    .nav_box ul li a{
+        text-decoration:none;
+        color:#818498;
+        display:inline-block;
+    }
+    
+    .nav_box ul li:last-child{
+        margin-bottom:0;
+    }
+    .nav_box ul li:last-child a{
+        padding:15px 30px;
+        text-transform:uppercase;
+        background-color:#fad400;
+        border-radius:30px;
+        font-family:"Fraunces",serif;
+        color:#23303e
+    }
+    .nav_box.active{
+        visibility:visible;
+        opacity:1;
+    }
+    .nav_box::before{
+        content:"";
+        position:absolute;
+        border-top:25px solid transparent;
+        border-left:10px solid transparent;
+        border-right:25px solid #fff;
+        top:-25px;
+        right:0;
+    }
+    
+    .sectionTxt{
+        margin-top: 30px;
+    }
+    .sectionTxt_42 p{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    /* .section_1{
+        background: url(../images/mobile/image-header.jpg);
+    } */
+    #section_1 h1{
+        margin-bottom: 5px;
+    }
+    .logo{
+        margin-top: 0px;
+    }
+
+    .sectionTxt_41 p{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .sectionTxt h3{
+        font-size: 35px;
+    }
+
+    .sectionImg_4{
+        background: top/cover no-repeat url(../images/mobile/image-graphic-design.jpg);
+    }
+    .sectionSplited div{
+        width: 100%;
+    }
+    .sectionSplited{
+        flex-direction: column;
+    }
+    
+    .learn-more {
+        display: block; 
+        position: relative;
+        text-align: center !important;
+    }
+
+
+    .sectionTxt{
+        text-align: center;
+        padding: 1em;
+    }
+    #gallery img{
+        width: 50%;
+    }
+    
+    #testmonials div{
+        flex-direction: column;  
+    }
+    
+    #testmonials{
+        padding-inline: 1em;
+    }
+    #testmonials h3{
+        font-size: 1em;
+    }
+    .singleTestmonial{
+        margin-inline: auto;
+    }
+    .singleTestmonial h6{
+        margin-bottom: 20%;
+    }
+}
